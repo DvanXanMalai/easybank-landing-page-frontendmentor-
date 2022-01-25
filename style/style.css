@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+:root {
+    --ff-primary: 'Public Sans', sans-serif;
+    --bc-primry-gradient: linear-gradient(to right, #31d35c, #00d192, #00cbbb, #00c2d4, #2bb7da);
+    --fw-primary-300 : 300;
+    --fw-primary-400 : 400;
+    --fw-primary-700 : 700;
+    --fc-primary-heading: hsl(233, 26%, 24%);
+    --fc-primary-paragraph: hsl(233, 8%, 62%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+}
+header {
+    display: flex;
+    height: 8vh;
+    padding: 1rem 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+img {
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5 {
+    color: var(--fc-primary-heading)
+}
+p {
+    color: var(--fc-primary-paragraph);
+}
+.display-class {
+    display: none;
+}
+.intro-img {
+    background-image: url(/easybank-landing-page-master/images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intro-text {
+    text-align: center;
+    padding: 2rem;
+}
+.intro-text > h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.intro-text > p {
+    font-weight: 300;
+    padding-inline: 1rem;
+    margin-bottom: 2rem;
+}
+.request-invite-btn {
+    background-image: var(--bc-primry-gradient);
+    color: white;
+    padding-inline: 1rem;
+    padding-block: 0.7rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+.request-invite-btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #87e6a0, #6ae0b8, #5cd8ca, #62ced4, #74c3d6);
+}
+.features {
+    text-align: center;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 98%);
+}
+.features > h2 {
+    padding-inline: 4rem;
+    font-weight: var(--fw-primary-400);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.features > p {
+    padding-inline: 2rem;
+}
+.features-description {
+    margin-top: 4rem;
+}
+.features-heading3 {
+    font-weight: var(--fw-primary-400);
+    font-size: 1.2rem;
+    margin-block: 1rem;
+}
+.features-paragraph {
+    margin-bottom: 2rem;
+    padding-inline: 2rem;
+}
+.articles {
+    display: grid;
+    place-items: center;
+    padding-inline: 2rem;
+    overflow: hidden;
+}
+.article {
+    margin-top: 4rem;
+    min-width: 200px;
+    max-width: 400px;
+    margin-bottom: rem;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 2px 4px 0px;
+}
+.article > img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    min-width: 200px;
+    max-width: 100%
+}   
+.article-text {
+    padding: 1rem 2rem 2rem 2rem;
+}
+.author {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+.article-text > h5 {
+    font-size: 1.2rem;
+    font-weight: var(--fw-primary-400);
+    margin-bottom: 0.5rem;
+}
+.article-text.paragraph {
+    font-size: 1rem;
+}
+footer {
+    background-color: var(--fc-primary-heading);
+    text-align: center;
+    padding-block: 2rem;
+}
+.social-media-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+i {
+    color: #FFF;
+    font-size: 1.5rem;
+}
+i:hover {
+    color: hsl(136, 65%, 51%);
+}
+.footer-links-ul {
+    list-style: none;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+.footer-links-ul > li {
+    margin-top: 1rem;
+}
+.footer-links {
+    color: white;
+    text-decoration: none;
+}
+.footer-links:hover {
+    color: hsl(136, 65%, 51%);
+}
+.copyright {
+    margin-top: 2em;
+}
+
+/* Mobile nav */
+.ham-burger {
+    cursor: pointer;
+}
+.nav-active {
+    display: inline;
+    width: 60%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 4rem;
+    padding-block: 2rem;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 4;
+}
+.nav-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+.nav-list:hover {
+    cursor: pointer;
+}
+.nav-links {
+    color: var(--fc-primary-heading);
+    font-size: 1.3rem;
+}
+.dark-overlay::after {
+    content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 8vh;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	opacity: 0.6;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+
+@media only screen and (min-width: 1000px){
+    .header {
+        align-items: center;
+        min-width: 10vh;
+    }
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+    .ham-burger {
+        display: none;
+    }
+    .display-class {
+        display: flex;
+    }
+    .nav-bar {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .nav-links {
+        color: var(--fc-primary-paragraph);
+        font-size: 1.2rem;
+    }
+    .nav-links:hover {
+        color:hsl(136, 65%, 51%);
+    }
+    .nav-list {
+        margin:0;
+    }
+    .intro {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        min-height: 85vh;
+    }
+    header {
+        padding-inline: 10rem;
+        min-height: 10vh;
+    }
+    .intro-text {
+        text-align: left;
+        width: 40%;
+        padding-inline-start: 10rem;
+        padding-inline-end: 0;
+        padding-top: 10rem;
+    }
+    .intro-img {
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+        background-image: url(/easybank-landing-page-master/images/bg-intro-desktop.svg);
+        background-size: cover;
+        background-position: top -200px right -250px;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .mockup-img {
+        width: 70%;
+        position: absolute;
+        top: -20%;
+    }
+    .intro-text > h2 {
+        font-size: 2.8rem;
+        width: 100%;  
+        padding: 0;
+    }
+    .intro-text > p {
+        padding: 0;
+    }
+    .features {
+        text-align: left;
+        overflow: hidden;
+        padding-inline-start: 10rem;
+        padding-inline-end: 0;
+    }
+    .features > h2 {
+        padding: 0;
+    }
+    .features > p {
+        padding: 0;
+        padding-inline-end: 20rem;
+    }
+    .features-description {
+        display: flex;
+        gap: 1rem;
+        padding-inline-end: 6rem;
+    }
+    .features-paragraph {
+        padding: 0;
+    }
+    .articles {
+        text-align: left;
+        margin-bottom: 5rem;
+        margin-top: 4rem;
+    }
+    .article-card-container {
+        padding-inline: 8rem;
+        display: flex;
+        gap: 2rem;
+    }
+    footer {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 10rem;
+        padding-block: 5rem;
+        margin: 0;
+    }
+    .footer-links-ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+        text-align: left;
+        gap: 1rem;
+        column-gap: 6rem;
+    }
+    .footer-links-ul > li {
+        margin: 0;
+    }
+}
